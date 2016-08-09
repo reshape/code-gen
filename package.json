@@ -1,0 +1,40 @@
+{
+  "name": "reshape-code-gen",
+  "description": "converts a reshape ast into a javascript function",
+  "version": "0.0.0",
+  "author": "Jeff Escalante",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/reshape/code-gen/issues",
+  "dependencies": {
+    "objectfn": "^2.0.0",
+    "with": "^5.1.1"
+  },
+  "devDependencies": {
+    "ava": "0.15.x",
+    "coveralls": "2.x",
+    "nyc": "6.x",
+    "reshape": "reshape/reshape",
+    "reshape-custom-elements": "reshape/custom-elements",
+    "reshape-parser": "reshape/parser",
+    "standard": "7.x"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/reshape/code-gen",
+  "keywords": [
+    "code-generator",
+    "reshape"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": "reshape/code-gen",
+  "scripts": {
+    "coverage": "nyc ava",
+    "coveralls": "nyc --reporter=lcov ava && cat ./coverage/lcov.info | coveralls",
+    "lint": "standard",
+    "test": "ava"
+  }
+}
