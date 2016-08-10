@@ -17,7 +17,7 @@
     "nyc": "^7.1.0",
     "reshape": "reshape/reshape",
     "reshape-custom-elements": "reshape/custom-elements",
-    "reshape-parser": "^0.1.0",
+    "reshape-parser": "^0.2.0",
     "standard": "7.x"
   },
   "engines": {
