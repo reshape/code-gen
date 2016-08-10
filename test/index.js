@@ -32,6 +32,16 @@ test('code', (t) => {
   t.truthy(res({ planet: 'world' }) === '<p foo="bar">hello world!</p>')
 })
 
+test('comment', (t) => {
+  const res = generator([
+    {
+      type: 'comment',
+      content: 'test comment'
+    }
+  ])
+  t.truthy(res() === '<!-- test comment -->')
+})
+
 test('runtime', (t) => {
   const runtime = { changeToDoge: (input) => 'doge' }
   const res = generator.call({ runtime }, [
