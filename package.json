@@ -12,12 +12,12 @@
     "with": "^5.1.1"
   },
   "devDependencies": {
-    "ava": "0.15.x",
-    "coveralls": "2.x",
-    "nyc": "6.x",
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.12",
+    "nyc": "^7.1.0",
     "reshape": "reshape/reshape",
     "reshape-custom-elements": "reshape/custom-elements",
-    "reshape-parser": "reshape/parser",
+    "reshape-parser": "^0.1.0",
     "standard": "7.x"
   },
   "engines": {
