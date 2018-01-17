@@ -36,10 +36,20 @@ test('comment', (t) => {
   const res = generator([
     {
       type: 'comment',
-      content: 'test comment'
+      content: ' test comment '
     }
   ])
   t.truthy(res() === '<!-- test comment -->')
+})
+
+test('ie conditional comment', (t) => {
+  const res = generator([
+    {
+      type: 'comment',
+      content: '[if IE]> test ie content <![endif]'
+    }
+  ])
+  t.truthy(res() === '<!--[if IE]> test ie content <![endif]-->')
 })
 
 test('runtime', (t) => {
