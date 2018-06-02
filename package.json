@@ -9,7 +9,7 @@
   "bugs": "https://github.com/reshape/code-gen/issues",
   "dependencies": {
     "objectfn": "^2.0.0",
-    "with": "^5.1.1"
+    "with": "^6.0.0"
   },
   "devDependencies": {
     "ava": "^0.24.0",
