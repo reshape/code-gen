@@ -1,5 +1,7 @@
 # Reshape Code Generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reshape/code-gen.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/reshape-code-gen.svg?style=flat-square)](https://npmjs.com/package/reshape-code-gen)
 [![tests](https://img.shields.io/travis/reshape/code-gen.svg?style=flat-square)](https://travis-ci.org/reshape/code-gen?branch=master)
 [![dependencies](https://img.shields.io/david/reshape/code-gen.svg?style=flat-square)](https://david-dm.org/reshape/code-gen)
