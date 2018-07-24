@@ -22,7 +22,12 @@ test.skip('html entity serialization', t => {
   return reshape({ generator, parser })
     .process(html)
     .then(res => {
-      t.truthy(res.output().trim() === '<!DOCTYPE html>\n<p foo="&quot;<>">&amp;-&nbsp;-"-&lt;-&gt;-&amp;-&nbsp;-"-&lt;-&gt;</p>\n<p foo="bar"></p>')
+      t.truthy(
+        res.output().trim() ===
+          '<!DOCTYPE html>\n<p foo="&quot;<>">&amp;-&nbsp;-"-&lt;-&gt;-&amp;-&nbsp;-"-&lt;-&gt;</p>\n<p foo="bar"></p>\n<script>var foo = ' <
+            bar >
+            '</script>'
+      )
     })
 })
 
