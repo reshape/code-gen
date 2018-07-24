@@ -17,16 +17,14 @@ test('basic', t => {
 })
 
 // temporary skip before parser adjustment is published
-test.skip('html entity serialization', t => {
+test('html entity serialization', t => {
   const html = readFileSync(path.join(fixtures, 'entities.html'), 'utf8')
   return reshape({ generator, parser })
     .process(html)
     .then(res => {
       t.truthy(
         res.output().trim() ===
-          '<!DOCTYPE html>\n<p foo="&quot;<>">&amp;-&nbsp;-"-&lt;-&gt;-&amp;-&nbsp;-"-&lt;-&gt;</p>\n<p foo="bar"></p>\n<script>var foo = ' <
-            bar >
-            '</script>'
+          '<!DOCTYPE html>\n<p foo="&quot;<>">&amp;-&nbsp;-"-&lt;-&gt;-&amp;-&nbsp;-"-&lt;-&gt;</p>\n<p foo="bar"></p>\n<script>var foo = \'<bar>\'</script>'
       )
     })
 })
